@@ -20,14 +20,11 @@ public class MainInvListener implements Listener{
 
 	@EventHandler
 	public void onClick(InventoryClickEvent e) {
-		System.out.println("Click");
 		Player p = (Player) e.getWhoClicked();
 		InventoryView inv = p.getOpenInventory();
 		ItemStack item = e.getCurrentItem();
 		if(inv.getTitle().equals(ChatColor.AQUA+"Suggestions")) {
-			System.out.println("Click 2");
 			if(item.getType() == Material.BOOK) {
-				System.out.println("Click 3");
 				e.setCancelled(true);
 				Suggestion suggestion = utils.getSuggestion(item);
 				utils.getSuggestionList().remove(suggestion);
