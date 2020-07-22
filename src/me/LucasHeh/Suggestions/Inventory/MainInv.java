@@ -31,17 +31,8 @@ public class MainInv implements Listener{
 			return;
 		}
 		for(int i=0; i<54; i++) {
-			/*if(i<=suggestionsLength) {
-				Suggestion suggestion = utils.getSuggestionList().get(i);
-				List<String> lore = new ArrayList<String>();
-				lore.add(ChatColor.GRAY + "Player: " + ChatColor.YELLOW + suggestion.getPlayerWhoSuggested().getName());
-				lore.add(" ");
-				lore.add(ChatColor.GRAY + "Left-Click to remove Suggestion");
-				utils.itemToInventory(Material.BOOK, ChatColor.GREEN + suggestion.getSuggestion(), lore, inv, i);
-			} else {*/
-				utils.itemToInventory(Material.BLACK_STAINED_GLASS_PANE, 
-						" ", null, inv, i);
-			//}
+			utils.itemToInventory(Material.BLACK_STAINED_GLASS_PANE, 
+					" ", null, inv, i);
 		}
 		int x = 0;
 		for(Suggestion suggestion : utils.getSuggestionList()) {
