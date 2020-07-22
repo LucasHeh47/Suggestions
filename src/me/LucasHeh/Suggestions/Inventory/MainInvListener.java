@@ -2,6 +2,7 @@ package me.LucasHeh.Suggestions.Inventory;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
+import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
@@ -20,7 +21,8 @@ public class MainInvListener implements Listener{
 	@EventHandler
 	public void onClick(InventoryClickEvent e) {
 		System.out.println("Click");
-		InventoryView inv = (InventoryView) e.getInventory();
+		Player p = (Player) e.getWhoClicked();
+		InventoryView inv = p.getOpenInventory();
 		ItemStack item = e.getCurrentItem();
 		if(inv.getTitle().equals(ChatColor.AQUA+"Suggestions")) {
 			System.out.println("Click 2");
