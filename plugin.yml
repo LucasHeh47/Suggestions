@@ -1,0 +1,11 @@
+main: me.LucasHeh.Suggestions.Main
+author: LucasHeh
+version: 1.0.0
+name: Suggestions
+api-version: 1.16
+
+commands:
+  suggest:
+    description: "Usage /suggest <suggestion>"
+  suggestions:
+    description: "Usage /suggestions"
